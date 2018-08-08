@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <title>train schedule</title>
+</head>
+
+<body>
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-sm-12 text-center header">
+                <h1 class='d-inline-block'>Train Schedule for the BROS</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2 border border-dark">
+        <div class="row">
+            <div class="col-sm-12 bg-dark text-white current">
+                Current Train Schedule
+            </div>
+            <div class="col-sm-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency(min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trainInfo">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2 border border-dark">
+        <div class="row">
+            <div class="col-sm-12 bg-dark text-white current">
+                Add Train
+            </div>
+            <div class="col-sm-5">
+                <form>
+                    <div class="form-group mt-2">
+                        <label for="trainName">Train Name
+                        </label>
+                        <textarea class="form-control" id="trainName" rows="1">
+                            </textarea>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="destination">Destination
+                        </label>
+                        <textarea class="form-control" id="destination" rows="1">
+                            </textarea>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="trainTime">First Train Time (HH:mm military time)
+                        </label>
+                        <textarea class="form-control" id="trainTime" rows="1">
+                            </textarea>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="frequency">Frequency (min)
+                        </label>
+                        <textarea class="form-control" id="frequency" rows="1">
+                            </textarea>
+                        <button type="submit" class="btn btn-dark mt-2 current" id="submit">Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-7">
+                <img src= "https://pics.me.me/i-didnt-choose-the-chuglife-the-chug-life-chose-me-20210296.png" id="image">
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+    <script src="assets/javascript/app.js">
+    </script>
+
+</body>
+
+</html>
